@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Produsol · Energia solar em Apucarana</title>
+    <meta name="description" content="10 painéis pagam a conta de luz de uma casa em Apucarana. Projeto, instalação e homologação em 45 dias. Rua Ponta Grossa, 270, Centro, Apucarana-PR." />
+    <meta name="theme-color" content="#2b66a3" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <!-- primeira pintura: nunca a página crua. O tema (?tema=) e a cor da primeira tela ligam aqui, antes de qualquer
+         arquivo; a folha do site vem em <link> (segura a pintura até chegar), nunca pelo JS. Ao trocar a paleta em
+         tokens.css, troque aqui as duas cores do tema padrão (a --cor-nevoa e a --cor-ceu-1). -->
+    <script>
+      (function () {
+        var d = document.documentElement;
+        // [cor da primeira tela (a --cor-nevoa), cor do navegador no celular (a --cor-ceu-1)]
+        var temas = { produsol: ['#f3e3c8', '#2b66a3'] };
+        var t = new URLSearchParams(location.search).get('tema');
+        if (!temas[t]) t = 'produsol';
+        if (t !== 'produsol') d.dataset.tema = t;
+        d.style.backgroundColor = temas[t][0];
+        document.querySelector('meta[name="theme-color"]').content = temas[t][1];
+        d.classList.add('js');
+      })();
+    </script>
+    <style>body{margin:0}html.js:not(.armada) .palco>*,html.js:not(.armada) .nav{visibility:hidden}</style>
+    <link rel="preload" as="image" href="./ilha.webp" fetchpriority="high" />
+    <script type="module" crossorigin src="./index-Cn0AbPgm.js"></script>
+    <link rel="stylesheet" crossorigin href="./index-D332954l.css">
+  </head>
+  <body>
+    <!-- Só links: o logo é o nome gigante do hero. Na demo, todos levam ao bloco de fechamento (#simular); num site
+     com mais seções, cada um vai para a sua. -->
+<nav class="nav" aria-label="Principal">
+  <div class="nav__in">
+    <a class="nav__link" href="#solucoes">Soluções</a>
+    <a class="nav__link" href="#obras">Obras</a>
+    <a class="nav__link" href="#duvidas">Dúvidas</a>
+    <a class="nav__link" href="#endereco">Endereço</a>
+  </div>
+</nav>
+
+    <!-- Hero: um palco preso enquanto a página rola mais uma tela; as camadas se separam na saída.
+     Cada .camada diz no HTML a profundidade no cursor (data-prof), quanto sobe na saída (data-saida, em alturas da
+     tela) e quanto cresce ou encolhe (data-escala). As nuvens são <img> com a posição nos atributos (motion/nuvens.js):
+       data-tela       computador ou celular (até 760 px): cada tela tem a sua composição
+       data-x          borda esquerda no começo, em fração da largura (a nuvem deriva para a direita e volta pela esquerda)
+       data-y          centro vertical, em fração da altura
+       data-largura    largura em unidades (computador: 1 unidade = min(largura, 1,9 × altura) / 100;
+                       celular: max(largura, 0,62 × altura) / 100)
+       data-espelhada  espelhada na horizontal        data-opacidade  de 0 a 1
+     width e height são o tamanho natural do arquivo. data-vel (unidades por segundo) e data-blur ficam na camada. -->
+<header class="hero" id="topo">
+  <div class="palco">
+    <div class="camada camada--ceu" data-camada="ceu" data-prof="0.05" data-saida="0.06">
+      <div class="camada__in">
+        <div class="ceu"></div>
+        <!-- serra distante no horizonte, bem apagada pela névoa -->
+        <svg class="serra" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 100 L0 74 C60 70 110 58 170 62 C230 66 260 52 320 50 C380 48 420 64 480 66 C540 68 580 54 640 44 C690 36 730 42 780 50 C830 58 870 40 920 36 C955 33 980 40 1000 44 L1000 100 Z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- nuvens de longe: pequenas, frias e um pouco desfocadas -->
+    <div class="camada camada--fundo" data-camada="fundo" data-prof="0.18" data-saida="0.16">
+      <div class="camada__in nuvens" data-nuvens="fundo" data-vel="0.32" data-blur="0.8">
+        <img src="./nuvem-2.webp" width="350" height="211" alt="" data-tela="computador" data-x="0.03" data-y="0.36" data-largura="11" data-espelhada data-opacidade="0.8" />
+        <img src="./nuvem-7.webp" width="279" height="210" alt="" data-tela="computador" data-x="0.77" data-y="0.22" data-largura="9" data-opacidade="0.75" />
+        <img src="./nuvem-4.webp" width="434" height="255" alt="" data-tela="computador" data-x="0.89" data-y="0.4" data-largura="12" data-opacidade="0.8" />
+        <img src="./nuvem-1.webp" width="1110" height="240" alt="" data-tela="computador" data-x="0.6" data-y="0.33" data-largura="18" data-opacidade="0.55" />
+        <img src="./nuvem-7.webp" width="279" height="210" alt="" data-tela="computador" data-x="0.16" data-y="0.19" data-largura="6" data-espelhada data-opacidade="0.5" />
+        <img src="./nuvem-2.webp" width="350" height="211" alt="" data-tela="celular" data-x="-0.12" data-y="0.22" data-largura="34" data-espelhada data-opacidade="0.85" />
+        <img src="./nuvem-7.webp" width="279" height="210" alt="" data-tela="celular" data-x="0.66" data-y="0.17" data-largura="22" data-opacidade="0.7" />
+        <img src="./nuvem-4.webp" width="434" height="255" alt="" data-tela="celular" data-x="0.78" data-y="0.44" data-largura="26" data-opacidade="0.8" />
+      </div>
+    </div>
+
+    <!-- mar de nuvens do horizonte, com a faixa de névoa por baixo (nunca aparece céu azul no pé da tela) -->
+    <div class="camada camada--horizonte" data-camada="horizonte" data-prof="0.34" data-saida="0.32">
+      <div class="camada__in nuvens" data-nuvens="horizonte" data-vel="0.55" data-blur="0.3">
+        <div class="neblina neblina--horizonte"></div>
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="computador" data-x="-0.05" data-y="0.53" data-largura="33" />
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="computador" data-x="0.16" data-y="0.67" data-largura="74" />
+        <img src="./nuvem-1.webp" width="1110" height="240" alt="" data-tela="computador" data-x="0.6" data-y="0.61" data-largura="52" data-espelhada />
+        <img src="./nuvem-4.webp" width="434" height="255" alt="" data-tela="computador" data-x="0.86" data-y="0.53" data-largura="19" data-espelhada />
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="celular" data-x="-0.36" data-y="0.47" data-largura="78" />
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="celular" data-x="0.04" data-y="0.56" data-largura="150" />
+        <img src="./nuvem-1.webp" width="1110" height="240" alt="" data-tela="celular" data-x="0.52" data-y="0.5" data-largura="110" data-espelhada />
+      </div>
+    </div>
+
+    <div class="camada camada--ilha" data-camada="ilha" data-prof="0.58" data-saida="0.6" data-escala="-0.14">
+      <div class="camada__in">
+        <div class="ilha">
+          <div class="ilha__flutua">
+            <img class="ilha__img" src="./ilha.webp" alt="Casa térrea de paredes brancas e porta azul com dez painéis solares no telhado, caixa d'água azul, mangueira, varal, moto vermelha e um cachorro dormindo, sobre um pedaço de terra vermelha que flutua no céu" width="1446" height="994" fetchpriority="high" decoding="async" />
+            <div class="ilha__ar" aria-hidden="true"></div>
+          </div>
+          <div class="ilha__nevoa" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- nuvens da frente: passam sobre a base da ilha e atrás do nome -->
+    <div class="camada camada--frente" data-camada="frente" data-prof="1" data-saida="1.25" data-escala="0.38">
+      <div class="camada__in nuvens" data-nuvens="frente" data-vel="0.95" data-blur="0">
+        <div class="neblina neblina--frente"></div>
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="computador" data-x="0.3" data-y="0.83" data-largura="72" data-espelhada />
+        <img src="./nuvem-1.webp" width="1110" height="240" alt="" data-tela="computador" data-x="-0.2" data-y="0.88" data-largura="80" />
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="computador" data-x="0.72" data-y="0.79" data-largura="36" data-espelhada />
+        <img src="./nuvem-7.webp" width="279" height="210" alt="" data-tela="computador" data-x="0.06" data-y="0.74" data-largura="13" />
+        <img src="./nuvem-2.webp" width="350" height="211" alt="" data-tela="computador" data-x="0.5" data-y="0.97" data-largura="30" />
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="celular" data-x="-0.3" data-y="0.62" data-largura="160" data-espelhada />
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="celular" data-x="0.56" data-y="0.6" data-largura="82" data-espelhada />
+        <img src="./nuvem-1.webp" width="1110" height="240" alt="" data-tela="celular" data-x="0.2" data-y="0.74" data-largura="170" />
+        <img src="./nuvem-4.webp" width="434" height="255" alt="" data-tela="celular" data-x="-0.2" data-y="0.86" data-largura="80" />
+        <img src="./nuvem-7.webp" width="279" height="210" alt="" data-tela="celular" data-x="0.7" data-y="0.94" data-largura="50" />
+      </div>
+    </div>
+
+    <!-- sombra de nuvem atrás do texto: parada e do tamanho do palco (se subisse com as nuvens, a borda viraria linha reta) -->
+    <div class="sombra-in" aria-hidden="true"><div class="sombra"></div></div>
+
+    <!-- muro: as nuvens mais perto da câmera, que sobem de baixo na saída e fecham a tela -->
+    <div class="camada camada--muro" data-camada="muro" aria-hidden="true">
+      <div class="camada__in nuvens" data-nuvens="muro" data-vel="0.5" data-blur="2.2">
+        <div class="neblina neblina--muro"></div>
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="computador" data-x="-0.05" data-y="0.17" data-largura="70" />
+        <img src="./nuvem-4.webp" width="434" height="255" alt="" data-tela="computador" data-x="0.6" data-y="0.15" data-largura="52" data-espelhada />
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="computador" data-x="-0.3" data-y="0.42" data-largura="160" data-espelhada />
+        <img src="./nuvem-1.webp" width="1110" height="240" alt="" data-tela="computador" data-x="0.36" data-y="0.47" data-largura="140" />
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="computador" data-x="0.42" data-y="0.66" data-largura="80" data-espelhada />
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="computador" data-x="-0.2" data-y="0.78" data-largura="170" />
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="celular" data-x="-0.4" data-y="0.14" data-largura="150" />
+        <img src="./nuvem-4.webp" width="434" height="255" alt="" data-tela="celular" data-x="0.45" data-y="0.12" data-largura="110" data-espelhada />
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="celular" data-x="-1" data-y="0.38" data-largura="320" data-espelhada />
+        <img src="./nuvem-1.webp" width="1110" height="240" alt="" data-tela="celular" data-x="-0.3" data-y="0.44" data-largura="280" />
+        <img src="./nuvem-3.webp" width="705" height="369" alt="" data-tela="celular" data-x="0.1" data-y="0.62" data-largura="170" data-espelhada />
+        <img src="./nuvem-6.webp" width="1208" height="246" alt="" data-tela="celular" data-x="-0.6" data-y="0.76" data-largura="330" />
+      </div>
+    </div>
+    <div class="veu" aria-hidden="true"></div>
+
+    <div class="texto">
+      <h1 class="marca">
+        <span class="sr">Produsol Energia Solar</span>
+        <!-- o logo da Produsol no lugar do nome: sobe por máscara na entrada e o sol abre depois (motion/entrada.js) -->
+        <span class="marca__linha marca__linha--logo" aria-hidden="true"><span class="marca__logo"><svg class="logo" viewBox="0 0 3916 856" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="currentColor"><path d="M0 0 C1.2 0.3 2.4 0.6 3.7 1 C7.2 1.9 10.6 2.9 14 4 C15.5 4.5 17 4.9 18.6 5.4 C69.3 21.3 117.3 53.1 149 96 C149.9 97.2 150.8 98.3 151.7 99.5 C181.4 138.6 197 186.4 196.6 235.2 C196.6 236.3 196.6 237.4 196.6 238.5 C196.5 255.4 195.1 271.5 191 288 C190.7 289.4 190.4 290.8 190.1 292.2 C174.6 356.8 127.9 412.7 72.1 447 C2.3 488.2 -80.9 501.9 -159.8 482.5 C-205.2 470.8 -244.7 449.6 -280 419 C-280.5 418.6 -280.5 418.6 -282.8 416.6 C-288 412 -292.5 407.3 -297 402 C-298.4 400.5 -299.8 399 -301.2 397.5 C-327.1 368.6 -344.2 332.6 -353 295 C-353.3 293.9 -353.6 292.8 -353.8 291.7 C-367.3 235.3 -352.9 174 -324 125 C-313.4 107.9 -301 92.4 -287 78 C-286.4 77.4 -286.4 77.4 -283.6 74.5 C-277.1 67.8 -270.4 61.7 -263 56 C-262 55.2 -261 54.4 -260 53.6 C-228.4 28.8 -191.9 10.7 -153 1 C-152.3 0.8 -152.3 0.8 -148.6 -0.1 C-99.9 -11.8 -48.6 -13.1 0 0 Z M-120 96 C-120.6 96.2 -120.6 96.2 -123.8 97.3 C-141.5 103.9 -156.3 115.2 -170 128 C-170.8 128.8 -171.7 129.5 -172.5 130.3 C-201.2 158 -216.9 198.4 -218.2 237.9 C-218.8 277.6 -207.7 314.3 -182 345 C-181.3 346 -180.6 346.9 -179.8 347.9 C-179.5 348.2 -179.5 348.2 -178 350 C-177.3 350 -176.7 350 -176 350 C-175.8 350.5 -175.8 350.5 -175 353 C-150.4 376.7 -119.1 389.7 -85 390.5 C-45.3 389.6 -11.9 371.9 15.5 343.9 C46.2 310.2 58.1 267.3 56.9 222.6 C54.2 183 36.6 146.7 7.6 119.8 C-28.7 89.9 -75.4 80.4 -120 96 Z " transform="translate(1268,362)"/><path d="M0 0 C3.5 3.5 2.9 8.7 3.4 13.4 C3.4 14.1 3.4 14.1 3.7 17.2 C5 30.4 6.1 43.7 7.1 57 C7.2 58.1 7.3 59.2 7.4 60.3 C10.7 101.6 10.7 101.6 9 105 C2.3 104.7 -3.4 103 -9.7 100.7 C-26.3 94.7 -42.7 91.1 -60 88 C-61.4 87.7 -62.8 87.5 -64.2 87.2 C-87.1 83.6 -114.1 84.3 -133.8 97.8 C-141.3 103.5 -145.9 109.7 -148 119 C-149.8 135.8 -142.4 149.8 -132.4 162.9 C-124.5 172.4 -115.5 181.1 -105.8 188.8 C-102.6 191.3 -99.6 193.9 -96.5 196.5 C-89.8 202.2 -83 207.7 -76.2 213.2 C-70.9 217.6 -65.7 222 -60.7 226.6 C-58.2 228.9 -55.6 230.9 -53 233 C-19.1 260.6 8.2 295.4 13.7 339.8 C16.6 369.4 4.8 397.9 -13 421 C-47.9 462.1 -95.2 475.8 -147.3 480.5 C-190.3 483 -233 480.5 -275 470.7 C-277.7 470.1 -280.4 469.5 -283.2 468.9 C-284.6 468.5 -286 468.2 -287.5 467.9 C-288.1 467.7 -288.1 467.7 -291.1 467.1 C-294 466 -294 466 -298 462 C-298.8 458.2 -298.8 458.2 -299.2 453.5 C-299.3 452.6 -299.3 452.6 -299.7 448.2 C-299.8 446.4 -300 444.5 -300.1 442.6 C-300.3 440.7 -300.5 438.8 -300.6 436.9 C-301.8 423.5 -302.7 410.1 -303.6 396.6 C-304.1 388.6 -304.8 380.6 -305.6 372.6 C-306.6 360.2 -306.6 360.2 -305 357 C-299.1 357.6 -294.2 359.8 -288.8 362.1 C-269.3 369.8 -249.4 375.5 -229 380 C-227.6 380.3 -226.3 380.6 -224.9 380.9 C-198 386.7 -167.3 387 -143 373 C-133.7 365.9 -126.7 358 -125 346 C-124.1 334 -128 324.6 -135 315 C-138.5 311.1 -142.2 307.4 -145.9 303.8 C-146.9 302.8 -147.8 301.9 -148.8 300.9 C-154.1 295.7 -159.4 290.8 -165 286 C-167 284 -169 282 -171 280 C-174.2 276.7 -177.4 273.6 -180.9 270.6 C-186 266.1 -190.7 261.3 -195.4 256.5 C-197.9 254.1 -200.4 251.8 -202.9 249.6 C-208.6 244.6 -213.7 239.3 -219 233.9 C-222.9 230.1 -226.9 226.6 -231 223 C-232.9 221.2 -234.7 219.4 -236.5 217.5 C-240.8 213.1 -245.4 209 -250 205 C-273.3 183.4 -288.2 154.3 -290.4 122.5 C-291 92.4 -281.1 63.7 -261 41 C-260.2 40.1 -259.4 39.1 -258.6 38.2 C-232.1 7.8 -193.9 -4.4 -155.2 -10.4 C-154.2 -10.5 -153.2 -10.7 -152.1 -10.8 C-102.7 -18 -48.1 -13.6 0 0 Z " transform="translate(2890,368)"/><path d="M0 0 C4.3 -0.3 8.4 -0.4 12.7 -0.4 C13.3 -0.4 13.3 -0.4 16.7 -0.4 C21.1 -0.4 25.5 -0.4 29.9 -0.4 C32.9 -0.4 36 -0.4 39 -0.4 C45.4 -0.4 51.8 -0.4 58.1 -0.4 C66.3 -0.4 74.5 -0.4 82.7 -0.4 C89 -0.4 95.3 -0.4 101.6 -0.4 C104.6 -0.4 107.6 -0.4 110.7 -0.4 C114.9 -0.4 119.1 -0.4 123.3 -0.4 C124.6 -0.4 125.8 -0.4 127.1 -0.4 C130.1 -0.4 133.1 -0.2 136 0 C142.7 10.1 137.4 33.5 136.8 45.5 C135.7 69.3 134.7 93.1 133.9 116.9 C133.3 135.4 132.6 153.8 131.7 172.3 C131 187.5 130.5 202.8 130 218 C129.4 235 128.8 252 128 268.9 C127 288.9 126.4 308.9 125.7 328.9 C125.7 329.5 125.7 329.5 125.6 332.5 C125.5 334.8 125.4 337.1 125.4 339.5 C125.2 345.6 124.9 351.6 124.6 357.7 C124.6 358.3 124.6 358.3 124.5 361.5 C124.4 363.9 124.3 366.3 124.1 368.7 C124 371.4 124 374.2 124 377 C127 380 129.6 379.3 133.8 379.3 C135.5 379.3 137.2 379.3 139 379.3 C140.8 379.3 142.7 379.3 144.6 379.3 C147.6 379.3 150.6 379.3 153.6 379.3 C156.8 379.3 160.1 379.3 163.3 379.3 C170 379.3 176.8 379.3 183.5 379.3 C202.6 379.4 221.8 379.4 240.9 379.4 C251.5 379.4 262.1 379.4 272.6 379.4 C279.3 379.5 286 379.5 292.7 379.4 C297.9 379.4 303 379.5 308.1 379.5 C309.1 379.5 309.1 379.5 313.8 379.5 C314.6 379.5 314.6 379.5 318.9 379.5 C320.4 379.5 321.9 379.5 323.4 379.5 C327 380 327 380 331 384 C331.4 388 331.4 388 331.2 392.9 C331.2 393.8 331.2 393.8 331.1 398.4 C331 400.4 331 402.4 330.9 404.4 C330.8 406.5 330.7 408.5 330.7 410.6 C330.5 416 330.3 421.3 330.1 426.7 C330 430 329.9 433.2 329.8 436.5 C329.6 441.7 329.4 446.9 329.2 452.1 C329.1 455.1 329 458 328.8 461 C328.8 461.9 328.8 461.9 328.6 466.4 C328.5 468 328.5 469.5 328.4 471.1 C328 475 328 475 326 479 C321.6 481.2 315.4 480.1 310.4 480.1 C309 480.1 307.6 480.1 306.1 480.1 C301.3 480.1 296.4 480.1 291.6 480.1 C288.1 480.1 284.7 480.2 281.2 480.2 C271.8 480.2 262.4 480.2 253 480.2 C245.1 480.2 237.3 480.2 229.5 480.2 C212 480.2 194.6 480.2 177.2 480.2 C176.1 480.2 175.1 480.2 174 480.2 C172.9 480.2 171.9 480.2 170.8 480.2 C153.8 480.2 136.8 480.2 119.8 480.2 C102.4 480.2 85 480.2 67.5 480.2 C57.7 480.2 47.9 480.2 38.2 480.2 C28.9 480.3 19.7 480.3 10.5 480.2 C7.1 480.2 3.8 480.2 0.4 480.3 C-4.2 480.3 -8.8 480.3 -13.4 480.2 C-14.1 480.2 -14.1 480.2 -17.6 480.3 C-26.8 480.2 -26.8 480.2 -29 478 C-29.6 468.3 -28.2 458.6 -27.1 449 C-27 447.3 -26.8 445.7 -26.6 444 C-25.7 435.9 -24.9 427.7 -23.9 419.6 C-23.1 412 -22.4 404.3 -21.7 396.6 C-21.6 395.2 -21.4 393.8 -21.3 392.4 C-20.9 387.3 -20.4 382.1 -20 377 C-19.8 374.8 -19.6 372.7 -19.4 370.5 C-13 295.8 -8.1 221 -5.3 146 C-5.3 144.4 -5.2 142.8 -5.1 141.1 C-4 110.7 -3.1 80.4 -2.8 50 C-2.7 48.6 -2.7 47.2 -2.7 45.7 C-2.6 40.1 -2.6 34.4 -2.5 28.8 C-2.5 24.6 -2.4 20.3 -2.4 16.1 C-2.4 14.8 -2.4 13.5 -2.4 12.2 C-2.2 3.3 -2.2 3.3 0 0 Z " transform="translate(3582,361)"/><path d="M0 0 C28.2 29 42.8 66.1 50.8 105.1 C51 106.4 51.3 107.6 51.6 108.9 C67 181.1 53.3 264 14.6 326.6 C12.7 329.5 10.8 332.3 8.8 335.1 C8.1 336.1 7.4 337.1 6.6 338.1 C1.2 345.6 -4.8 352.4 -11.2 359.1 C-12.3 360.3 -13.4 361.4 -14.5 362.6 C-39 387.9 -69.7 402.9 -103.2 412.1 C-104.9 412.6 -106.5 413.1 -108.2 413.6 C-136.8 421.3 -167.3 423.3 -196.7 423.3 C-198.4 423.3 -200.2 423.3 -202.1 423.3 C-206.9 423.3 -211.8 423.3 -216.6 423.3 C-221.7 423.3 -226.9 423.3 -232 423.3 C-240.7 423.3 -249.3 423.3 -257.9 423.3 C-267.8 423.2 -277.7 423.3 -287.6 423.3 C-296.1 423.3 -304.7 423.3 -313.2 423.3 C-318.3 423.3 -323.4 423.3 -328.5 423.3 C-348.9 423.3 -369.4 423.2 -389.9 422.8 C-391.6 422.8 -393.3 422.8 -395 422.7 C-396.6 422.7 -398.2 422.7 -399.8 422.6 C-401.2 422.6 -402.5 422.6 -403.9 422.6 C-407.2 422.1 -407.2 422.1 -410.2 419.1 C-411.7 404 -409.8 388 -409.1 372.8 C-407.9 349.3 -406.9 325.7 -406.2 302.2 C-405.6 284 -404.9 265.8 -404 247.6 C-403.3 232.3 -402.7 216.9 -402.2 201.6 C-401.6 182.9 -400.9 164.2 -400 145.5 C-399.3 130.4 -398.8 115.3 -398.2 100.2 C-397.6 81.4 -396.9 62.7 -396 44 C-395.1 25.6 -394.5 7.3 -393.9 -11 C-393.8 -16.6 -393.6 -22.3 -393.4 -27.9 C-393.3 -30.7 -393.2 -33.4 -393.1 -36.2 C-393 -37 -393 -37 -392.9 -40.8 C-392.8 -42.1 -392.8 -43.4 -392.7 -44.7 C-392.2 -47.9 -392.2 -47.9 -389.2 -51.9 C-384.7 -53.4 -380.1 -53.1 -375.3 -53.2 C-374.7 -53.2 -374.7 -53.2 -371.9 -53.2 C-368.1 -53.3 -364.3 -53.4 -360.5 -53.4 C-357.8 -53.5 -355.1 -53.5 -352.4 -53.5 C-343.7 -53.7 -335 -53.8 -326.3 -53.9 C-323.3 -54 -320.3 -54 -317.4 -54.1 C-59.4 -57.9 -59.4 -57.9 0 0 Z M-264.2 38.1 C-266 43.4 -265.7 49.2 -265.9 54.8 C-266 56.2 -266.1 57.5 -266.1 59 C-266.2 61.9 -266.4 64.9 -266.5 67.9 C-266.8 75.6 -267.2 83.3 -267.5 91.1 C-267.6 92.6 -267.6 94.1 -267.7 95.6 C-268.2 106.3 -268.7 117 -269.3 127.6 C-270.2 143.1 -270.8 158.5 -271.4 174 C-271.9 189 -272.6 204 -273.5 219 C-274.4 234.5 -275 250.1 -275.6 265.6 C-276 276.2 -276.4 286.8 -277 297.4 C-277.3 301.7 -277.5 306.1 -277.6 310.5 C-277.6 311.9 -277.6 313.2 -277.7 314.6 C-277.2 318.1 -277.2 318.1 -273.2 322.1 C-269.2 322.7 -265.4 323 -261.2 323.1 C-259.5 323.2 -257.8 323.3 -256 323.4 C-250.9 323.6 -245.8 323.8 -240.6 324.1 C-237.4 324.2 -234.2 324.3 -231 324.5 C-189.4 326.2 -154.6 323.4 -122.1 294.9 C-96.8 270.9 -86.5 240.3 -84.6 206.4 C-84.4 204.5 -84.3 202.7 -84.2 200.7 C-81.4 155.6 -79.7 113.4 -111.2 77.1 C-134 52.1 -162.4 39.6 -196 38 C-197.5 37.9 -199.1 37.8 -200.7 37.7 C-205.6 37.4 -210.6 37.2 -215.5 36.9 C-218.8 36.8 -222.2 36.6 -225.5 36.4 C-243.1 35.5 -243.1 35.5 -251.2 35.1 C-252.1 35.1 -252.1 35.1 -256.5 34.9 C-260.2 35.1 -260.2 35.1 -264.2 38.1 Z " transform="translate(1938.25,416.875)"/><path d="M0 0 C7.1 0 14.2 -0 21.3 -0 C83.4 -0 83.4 -0 107.8 0.5 C108.5 0.5 108.5 0.5 112.2 0.6 C150.3 1.7 189.4 11 218.9 36.1 C219.6 36.6 219.6 36.6 222.8 39.3 C243.9 59.3 256.1 87.5 257 116.5 C257.6 152.7 252.5 188.3 226.9 216.1 C225.9 217.2 224.9 218.3 223.8 219.5 C205.9 238.2 184.8 249 160.9 258.1 C159.5 258.7 158.2 259.2 156.7 259.7 C153.8 260.9 150.9 262 147.9 263.1 C148.4 270.3 151.3 276.3 154.2 282.8 C155.3 285.3 156.4 287.9 157.5 290.4 C158.1 291.7 158.6 293 159.2 294.3 C161.8 300.2 164.4 306.2 166.9 312.1 C167.9 314.5 168.9 316.8 169.9 319.1 C199.9 389.1 199.9 389.1 201.4 392.6 C202.4 395 203.4 397.3 204.4 399.6 C206.9 405.4 209.4 411.2 211.9 417.1 C217.8 430.9 223.7 444.7 229.7 458.4 C230.2 459.6 230.8 460.8 231.3 462.1 C231.7 463.1 232.2 464.2 232.7 465.2 C235.9 472.9 235.9 472.9 234.9 478.1 C232.9 480.1 232.9 480.1 227.9 480.3 C219.4 480.2 210.8 479.7 202.3 479.3 C181.5 478.2 160.8 477.5 140 476.8 C134.3 476.6 128.7 476.4 123 476.2 C120.1 476.1 117.1 476 114.2 476 C112.5 475.9 110.9 475.8 109.1 475.8 C107.7 475.7 106.3 475.7 104.8 475.6 C100.5 475.1 97.6 474.3 93.9 472.1 C92.1 469 92.1 469 90.9 465.2 C90.4 463.8 89.9 462.3 89.4 460.8 C88.9 459.3 88.4 457.7 87.9 456.1 C87.4 454.6 86.9 453 86.3 451.4 C84.6 446.2 82.9 441 81.3 435.9 C80 432 78.8 428.2 77.6 424.4 C77.3 423.4 76.9 422.5 76.6 421.5 C73.7 412.6 70.8 403.7 67.8 394.8 C63.8 382.8 59.9 370.9 56 358.9 C51.3 344.2 46.3 329.5 41.3 314.9 C36.3 300.5 31.6 286 26.9 271.5 C23 259.5 19 247.5 14.7 235.7 C13.1 230.9 11.9 227.2 11.9 222.1 C13.9 220.1 13.9 220.1 16.9 220 C17.5 220 17.5 220 20.7 220.1 C22.1 220.1 23.5 220.2 25 220.2 C26.5 220.2 28 220.3 29.6 220.3 C59.8 220.7 85.9 213.2 108.6 192.8 C121.3 178.7 127.7 158.7 126.8 139.8 C125.5 127.4 120.5 116.6 110.9 108.6 C95 97.2 79.3 94 59.9 94 C58.8 94 57.7 94 56.5 93.9 C52.8 93.9 49.1 93.9 45.4 93.9 C44.2 93.9 42.9 93.9 41.6 93.9 C26.4 94 11.2 94.1 -4 94.9 C-5.3 95 -6.6 95.1 -8 95.2 C-11.1 95.4 -14.1 95.7 -17.1 96.1 C-19.6 99.9 -19.5 102.1 -19.7 106.6 C-19.7 107.4 -19.7 107.4 -19.9 111.4 C-20 113.1 -20 114.8 -20.1 116.6 C-20.1 117.5 -20.1 117.5 -20.3 122 C-20.6 126.9 -20.8 131.7 -21 136.6 C-21.1 140.6 -21.3 144.7 -21.5 148.7 C-22.6 174.7 -23.6 200.6 -24.4 226.6 C-24.9 242 -25.6 257.3 -26.3 272.7 C-27.1 288 -27.6 303.3 -28.1 318.6 C-28.7 337.3 -29.4 356 -30.3 374.7 C-31.2 392.8 -31.8 410.9 -32.4 428.9 C-33.9 476 -33.9 476 -38.1 480.1 C-42.3 480.2 -46.4 480.1 -50.6 479.9 C-53.3 479.8 -56.1 479.7 -58.8 479.5 C-60.3 479.5 -61.8 479.4 -63.3 479.3 C-70.1 479 -76.8 478.8 -83.5 478.6 C-90.8 478.4 -98 478.1 -105.3 477.9 C-109.1 477.8 -112.8 477.6 -116.6 477.5 C-122.1 477.3 -127.6 477.1 -133.1 476.9 C-134.8 476.9 -136.5 476.8 -138.2 476.8 C-153.3 476.2 -153.3 476.2 -160.1 474.1 C-163.1 468.2 -161 458.8 -160.8 452.2 C-160.8 451.1 -160.8 450.1 -160.8 449 C-160.3 426.9 -159.3 404.8 -158.3 382.7 C-157.4 364 -156.6 345.3 -156 326.6 C-155.4 308.6 -154.7 290.6 -153.8 272.6 C-153.1 257.3 -152.6 242 -152.1 226.6 C-151.5 207.9 -150.8 189.2 -149.8 170.5 C-149.1 154.1 -148.5 137.7 -148 121.4 C-147.4 103.6 -146.7 85.8 -145.8 68.1 C-145.1 55 -144.7 41.9 -144.4 28.9 C-144.3 25 -144.2 21 -144.1 17.1 C-144.1 15.9 -144 14.6 -144 13.3 C-143.9 9.8 -143.9 9.8 -143.1 4.1 C-137.4 0.7 -133.3 0.7 -126.9 0.6 C-125.8 0.6 -124.6 0.6 -123.4 0.6 C-119.6 0.5 -115.7 0.5 -111.9 0.4 C-109.1 0.4 -106.3 0.4 -103.6 0.3 C-69.1 -0 -34.5 -0 0 0 Z " transform="translate(604.0955810546875,362.873046875)"/><path d="M0 0 C1.3 -0 2.5 -0 3.8 -0 C8 -0 12.2 -0 16.4 -0 C19.3 -0 22.2 -0 25.1 -0 C31.2 -0 37.3 -0 43.3 -0 C51.1 0 59 0 66.8 -0 C72.8 -0 78.8 -0 84.7 -0 C87.6 -0 90.5 -0 93.4 -0 C97.4 -0 101.4 -0 105.4 0 C106.6 -0 107.8 -0 109.1 -0 C117.3 0 117.3 0 120.7 3.4 C120.8 7.3 120.7 11 120.5 14.8 C120.4 15.4 120.4 15.4 120.3 18.4 C119.8 27.6 119.2 36.8 118.5 46.1 C117.7 56.2 117.2 66.3 116.7 76.5 C116.1 88.3 115.3 100.2 114.4 112.1 C113.5 123.5 113 134.9 112.4 146.3 C111.9 155.7 111.4 165 110.7 174.4 C109.7 187 109 199.7 108.4 212.4 C108.1 219.3 107.7 226.2 107.1 233.1 C105.7 248.3 105.4 263.4 105.3 278.6 C105.3 281.1 105.3 283.5 105.2 285.9 C105 313.6 108.5 339.2 126 361.6 C143.1 379.1 167.7 384.4 191.3 384.8 C200.2 384.6 208.2 383.9 216.7 381.4 C218.2 381 219.7 380.5 221.3 380.1 C240.9 372.5 254.2 360.2 263.7 341.4 C265.5 337.1 267.1 332.8 268.7 328.4 C269.2 327 269.7 325.6 270.2 324.1 C277.7 299.3 279 274.2 280.1 248.5 C280.7 236.6 281.4 224.8 282.2 213 C283.2 195.8 284.2 178.7 285 161.6 C285.5 150.6 286.1 139.6 286.9 128.6 C287.6 119.1 288.1 109.7 288.5 100.3 C289.4 84.2 290.3 68.1 291.4 52 C291.6 49.4 291.7 46.7 291.9 44.1 C293.4 20.7 293.4 20.7 294.5 9.8 C294.7 8.6 294.8 7.4 294.9 6.2 C295.7 3.4 295.7 3.4 299.7 0.4 C303.9 0.1 308.1 -0 312.4 0 C313.7 -0 315 -0 316.3 -0 C320.6 -0 324.9 -0 329.3 -0 C332.2 -0 335.2 -0 338.2 -0 C344.5 -0 350.8 -0 357 -0 C365.1 0 373.2 0 381.2 -0 C387.4 -0 393.6 -0 399.7 -0 C402.7 -0 405.7 -0 408.6 -0 C412.8 -0 416.9 -0 421.1 0 C422.3 -0 423.6 -0 424.8 -0 C433.3 0 433.3 0 436.7 3.4 C437.3 13.8 436 24.3 435.3 34.6 C434.2 49.4 433.3 64.1 432.6 78.8 C432.1 89.8 431.5 100.8 430.7 111.8 C429.7 125.2 429 138.7 428.4 152.1 C427.9 162.3 427.4 172.5 426.7 182.8 C425.7 196.9 425 211.1 424.4 225.2 C423.8 237.8 423.2 250.5 422.4 263.1 C421.8 272.9 421.4 282.8 421 292.7 C418.7 345.1 413.3 391.6 373.3 430 C354.4 447 332.1 458.9 308.7 468.4 C307.6 468.8 306.6 469.2 305.6 469.7 C288.7 476.1 270.4 479.6 252.7 482.4 C251.9 482.5 251.9 482.5 247.8 483.2 C247 483.3 247 483.3 242.8 484 C241.3 484.3 239.8 484.5 238.3 484.7 C222.8 486.5 207.3 486.5 191.7 486.5 C189.9 486.5 188 486.5 186.1 486.5 C167.9 486.5 149.9 485.8 131.8 483.1 C130.3 482.9 128.7 482.7 127.1 482.5 C114.8 480.7 102.7 478.4 90.7 475.4 C88.8 474.9 86.9 474.5 85 474.1 C63.6 468.8 43.8 461.4 24.7 450.4 C23.6 449.8 22.6 449.2 21.5 448.6 C-4.6 432.9 -21.4 408.3 -29.4 379.2 C-37.5 345.2 -35.4 310.1 -33.5 275.6 C-33.3 272.3 -33.2 269 -33 265.6 C-31.8 244.2 -30.7 222.7 -29 201.3 C-28.2 190 -27.7 178.7 -27.1 167.4 C-26.6 158.1 -26 148.7 -25.3 139.4 C-24.4 126.8 -23.7 114.1 -23.1 101.5 C-22.5 90.8 -21.9 80.1 -21.1 69.4 C-20.3 57.8 -19.7 46.2 -19.1 34.6 C-18.7 26.9 -18.2 19.2 -17.5 11.5 C-17.4 10 -17.3 8.5 -17.1 7 C-15.2 -1.7 -7.2 -0 0 0 Z " transform="translate(2095.340087890625,362.61181640625)"/><path d="M0 0 C1.7 0 3.4 0.1 5.2 0.1 C46.4 1.1 83.2 10.9 112.6 41.3 C116.5 45.6 119.6 49.7 122.6 54.6 C123.3 55.6 123.9 56.7 124.6 57.7 C145.6 92.6 148 134.9 139.5 174 C138.3 178.6 137 183.1 135.6 187.6 C135.3 188.7 135 189.8 134.7 190.9 C128 212.3 116.9 231.2 101.6 247.6 C100.5 248.9 99.4 250.1 98.2 251.4 C63.6 283 13.5 297.6 -32.9 295.5 C-43.8 294.5 -54.5 292.5 -64.4 287.6 C-74.2 271.2 -74.3 246.2 -77.1 227.4 C-77.2 226.7 -77.2 226.7 -77.8 222.9 C-78 221.5 -78.2 220.1 -78.4 218.7 C-78.5 218.1 -78.5 218.1 -79 214.9 C-79.4 211.6 -79.4 211.6 -79.4 206.6 C-74.9 203.7 -70.5 204.8 -65.4 205.1 C-44.2 206.2 -23.6 204.2 -6.4 190.6 C6.5 178.1 11.6 163.7 12.1 146 C11.8 133.1 10.6 118.3 2.6 107.6 C-17.3 89.4 -47.6 91.7 -72.8 92.8 C-83.6 93.4 -94.1 94.3 -104.4 97.6 C-106 100.8 -105.7 104 -105.8 107.5 C-105.9 109.1 -106 110.8 -106 112.5 C-106.1 114.4 -106.2 116.2 -106.3 118.1 C-106.4 120 -106.4 121.9 -106.5 123.9 C-106.7 129.1 -107 134.2 -107.2 139.4 C-107.3 142.6 -107.4 145.8 -107.6 149 C-108.8 176.6 -109.8 204.1 -110.7 231.6 C-111.2 247 -111.9 262.4 -112.6 277.8 C-113.4 294.5 -114 311.3 -114.5 328 C-115.1 345.4 -115.8 362.8 -116.6 380.1 C-117.5 398.5 -118.1 416.9 -118.7 435.3 C-119 445.5 -119.3 455.8 -119.8 466.1 C-119.9 467.4 -119.9 468.8 -120 470.2 C-120.4 473.6 -120.4 473.6 -122.4 478.6 C-130.5 482.7 -146.2 479.2 -155.1 478.8 C-168.3 478.1 -181.5 477.5 -194.7 477.1 C-195.3 477.1 -195.3 477.1 -198.6 476.9 C-205 476.7 -211.4 476.5 -217.8 476.3 C-220.1 476.2 -222.5 476.2 -224.8 476.1 C-225.9 476.1 -227 476 -228.1 476 C-232.9 475.8 -237.6 475.6 -242.4 474.6 C-242.4 468.8 -242.5 462.9 -242.5 457 C-242.5 454.1 -242.5 451.1 -242.6 448.1 C-242.6 438.9 -242.4 430.1 -240.9 421 C-238.7 406.3 -239 391 -238.6 376.1 C-237.9 357.1 -237.3 338.1 -236.4 319.1 C-235.6 301.9 -234.9 284.7 -234.4 267.5 C-233.8 249 -233 230.6 -232.1 212.1 C-231.4 196.8 -230.9 181.5 -230.4 166.1 C-229.8 147.4 -229.1 128.7 -228.1 110 C-227.4 95.9 -227 81.8 -226.5 67.7 C-225.4 32.7 -225.4 32.7 -224.4 16.7 C-224.3 15.5 -224.2 14.2 -224.2 13 C-223.6 5 -223.6 5 -221.4 1.6 C-216.2 0.5 -211.1 0.5 -205.9 0.4 C-204.2 0.4 -202.5 0.4 -200.7 0.4 C-199.8 0.4 -199.8 0.4 -195.1 0.3 C-194.2 0.3 -194.2 0.3 -189.2 0.2 C-183.9 0.2 -178.6 0.1 -173.3 0.1 C-169.9 0.1 -166.6 0 -163.3 -0 C-53.6 -1 -53.6 -1 0 0 Z " transform="translate(242.375,363.375)"/></g><g class="logo__sol" fill="#f06a25"><path d="M0 0 C7.8 4.5 11.6 10.4 14 19 C26.7 89.4 -4.9 178.2 -44 236 C-46.2 239.2 -48.5 242 -51 245 C-51.3 245.4 -51.3 245.4 -53 247.5 C-58.8 254.3 -65.3 260.1 -74 263 C-79.3 263.4 -82.6 263.1 -87 260 C-100.3 244.5 -98 221.1 -97 202 C-94.9 174.1 -88.6 146.6 -80 120 C-79.7 119.1 -79.7 119.1 -78.3 114.5 C-71.2 92.2 -62.5 70.4 -51 50 C-50 48 -48.9 46.1 -47.9 44.1 C-20.8 -4.2 -20.8 -4.2 0 0 Z " transform="translate(3398,2)"/><path d="M0 0 C21.6 11.9 30.1 41.8 36.6 63.7 C52.7 119.6 65.9 200.5 39 255 C35.6 260.1 32.7 264.4 27 267 C21 267.8 17.8 267.4 12.4 264.6 C-24.4 234.1 -29.8 166.6 -34.1 122.2 C-36.1 99.5 -36 76.5 -33 54 C-32.8 52.3 -32.6 50.6 -32.4 48.9 C-30.3 33 -27.3 15.1 -15.4 3.4 C-9.7 -0.7 -6.8 -1.5 0 0 Z " transform="translate(3107,54)"/><path d="M0 0 C10.7 5.9 19.9 12.9 29 21 C29.6 21.6 29.6 21.6 32.9 24.4 C50.6 40.1 50.6 40.1 58 49 C59.4 50.5 60.8 52.1 62.2 53.6 C66.8 58.7 71 64 75.2 69.4 C77 71.7 78.8 74 80.7 76.3 C88.8 86.4 95.9 97.1 103 108 C104.1 109.7 105.2 111.3 106.3 113 C112.5 122.7 118.1 132.5 123 143 C123.8 144.7 124.7 146.4 125.5 148.2 C134.3 166.9 144.8 189.2 138.8 210.2 C136.5 213.8 133.9 216.1 130 218 C113.9 219.7 99.4 209.9 87.2 200.3 C85.5 198.9 83.7 197.4 82 196 C81 195.1 79.9 194.3 78.9 193.4 C66.3 182.9 54.7 171.4 44 159 C43 157.9 42 156.8 41 155.6 C11.2 121.1 -16.2 80.8 -30 37 C-30.6 35.3 -31.2 33.6 -31.8 31.9 C-34.2 22 -35.2 11.8 -32 2 C-23 -8.9 -11.4 -5.5 0 0 Z " transform="translate(2841,153)"/><path d="M0 0 C3.7 3.7 4.6 6.7 4.8 11.9 C0.9 31.2 -13.2 45.9 -26.4 59.6 C-27.6 60.9 -28.7 62.1 -29.9 63.4 C-33.6 66.9 -37.5 70.1 -41.4 73.2 C-43.7 75.1 -45.9 77 -48.1 78.9 C-52.6 82.9 -57.3 86.5 -62.1 90.1 C-63 90.7 -63.9 91.4 -64.8 92.1 C-71.2 96.8 -77.6 101.4 -84.4 105.6 C-85.9 106.6 -87.4 107.6 -89 108.6 C-123.7 130.5 -166 155.8 -208.1 155.9 C-209.9 156 -211.7 156 -213.5 156 C-219.7 155.5 -223.6 154.2 -228.2 150.1 C-232.1 145.6 -231.8 141.4 -231.4 135.6 C-225.9 117.6 -212.6 103.5 -199.5 90.5 C-198.6 89.6 -197.7 88.7 -196.7 87.7 C-190.6 81.6 -184.2 76 -177.4 70.6 C-176.2 69.7 -175 68.7 -173.7 67.7 C-149.8 48.8 -124 31.7 -96.4 18.6 C-95.5 18.2 -94.7 17.8 -93.8 17.4 C-23.5 -16.6 -23.5 -16.6 0 0 Z " transform="translate(3663.375,209.375)"/><path d="M0 0 C1.6 0.4 3.2 0.9 4.8 1.3 C24.4 6.9 43 14.6 61 24 C61.6 24.3 61.6 24.3 64.4 25.6 C81.2 33.5 96.4 44.6 111 56 C111.9 56.7 112.9 57.5 113.9 58.2 C144.9 82.9 169 114.2 186 150 C186.3 150.6 186.3 150.6 187.8 153.7 C212.1 206.1 212.6 267.3 193.5 321.3 C183.8 347.6 170 371.4 152 393 C151.1 394.1 150.2 395.2 149.3 396.3 C105.2 448.7 43.2 480.5 -23 495 C-24.3 495.3 -25.5 495.6 -26.8 495.8 C-34.7 497.5 -42.5 498.6 -50.5 499.5 C-54 500 -54 500 -59 502 C-62 502.3 -62 502.3 -65.4 502.3 C-66.7 502.3 -68 502.3 -69.3 502.3 C-70.7 502.3 -72.1 502.3 -73.5 502.3 C-74.9 502.3 -76.4 502.3 -77.8 502.3 C-80.9 502.3 -83.9 502.3 -86.9 502.3 C-91.5 502.3 -96.1 502.3 -100.7 502.4 C-103.7 502.4 -106.6 502.4 -109.6 502.4 C-110.9 502.4 -112.3 502.4 -113.7 502.4 C-122 502.4 -129 501.3 -137 499 C-140 498.5 -143 498 -146.1 497.6 C-160.6 495.3 -174.9 492.3 -189 488 C-190.2 487.6 -191.5 487.3 -192.8 486.9 C-261.6 466.1 -326 420.7 -361 357 C-390.5 301.3 -399 239.9 -380.8 179 C-371.9 151.2 -358.3 124.8 -340 102 C-339.3 101.1 -338.6 100.3 -337.9 99.4 C-323.5 81.2 -306.7 64.9 -288 51 C-286.7 50.1 -285.5 49.1 -284.2 48.1 C-203.5 -10.6 -95.5 -26.6 0 0 Z " transform="translate(3307,354)"/></g></svg></span></span>
+      </h1>
+
+      <div class="chamada">
+        <!-- uma linha por <span class="linha">: as quebras são estas, em qualquer tela -->
+        <p class="chamada__texto">
+          <span class="linha"><span>10 painéis pagam a conta de luz</span></span>
+          <span class="linha"><span>de uma casa em Apucarana. Projeto,</span></span>
+          <span class="linha"><span>instalação e homologação em 45 dias.</span></span>
+        </p>
+        <a class="botao chamada__botao" href="https://wa.me/5543988302020?text=Ol%C3%A1%2C%20Produsol!%20Quero%20simular%20a%20energia%20solar%20com%20a%20minha%20conta%20de%20luz." target="_blank" rel="noopener">Simular minha conta<span class="botao__seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" /></svg></span></a>
+      </div>
+
+      <p class="dica">[ role para ver o sistema ]</p>
+    </div>
+
+    <!-- HUD: os números contam na entrada até o valor escrito aqui (de data-de, ou de zero) e depois seguem vivos:
+         a hora anda em tempo real, a geração de agora oscila um pouco e o total de hoje soma o que ela gera -->
+    <div class="hud hud--esq" aria-label="Geração da casa agora">
+      <p><span data-hud="hora" data-de="05:40">10:40</span> · Apucarana · 23°33′S</p>
+      <p>Gerando agora <span data-hud="agora">4,1</span> kW</p>
+    </div>
+    <div class="hud hud--dir">
+      <p>Hoje: <span data-hud="hoje">9,8</span> de 27 kWh</p>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <!-- Bloco curto de fechamento: sobe por cima do fim do hero (a primeira seção do <main> faz isso, ver hero.css).
+     A linha de dados aceita qualquer número de itens: no computador eles dividem a largura em partes iguais. -->
+<section class="fecho" id="sistema" aria-labelledby="fecho-titulo">
+  <p class="fecho__rotulo">[ o sistema dessa casa ]</p>
+  <h2 class="fecho__titulo" id="fecho-titulo">A conta de luz caiu<br />de R$ 780 para R$ 86.</h2>
+
+  <dl class="fecho__dados">
+    <div class="dado"><dt>Painéis</dt><dd>10 × 550 W</dd></div>
+    <div class="dado"><dt>Potência</dt><dd>5,5 kWp</dd></div>
+    <div class="dado"><dt>Geração</dt><dd>27 kWh/dia</dd></div>
+    <div class="dado"><dt>No mês</dt><dd>810 kWh</dd></div>
+    <div class="dado"><dt>Conta</dt><dd>R$ 780 → R$ 86</dd></div>
+    <div class="dado"><dt>Retorno</dt><dd>2 anos e 9 meses</dd></div>
+  </dl>
+
+  <div class="fecho__acao">
+    <a class="botao botao--tinta" href="https://wa.me/5543988302020?text=Ol%C3%A1%2C%20Produsol!%20Quero%20simular%20a%20energia%20solar%20com%20a%20minha%20conta%20de%20luz." target="_blank" rel="noopener">Simular minha conta<span class="botao__seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" /></svg></span></a>
+    <p class="fecho__nota">Mande uma foto da sua conta de luz no WhatsApp: a simulação leva dois minutos.</p>
+  </div>
+
+</section>
+
+      <!-- O que a Produsol faz: os três serviços que aparecem no Instagram dela (energia solar, carregador veicular e
+     ar-condicionado). Qualquer quantidade de itens: no computador eles dividem a largura. -->
+<section class="secao solucoes" id="solucoes" aria-labelledby="solucoes-titulo">
+  <p class="secao__rotulo">[ soluções completas ]</p>
+  <h2 class="secao__titulo" id="solucoes-titulo">Energia solar, carro elétrico<br />e ar-condicionado. Uma equipe só.</h2>
+
+  <ol class="solucoes__lista">
+    <li class="solucao">
+      <span class="solucao__num">01</span>
+      <h3 class="solucao__nome">Energia solar</h3>
+      <p class="solucao__texto">Projeto, instalação dos painéis e homologação na Copel. Você manda a conta de luz e acompanha ela cair.</p>
+    </li>
+    <li class="solucao">
+      <span class="solucao__num">02</span>
+      <h3 class="solucao__nome">Carregador para carro elétrico</h3>
+      <p class="solucao__texto">Solução completa em carregamento veicular, na garagem de casa ou na empresa, para o carro carregar onde você estiver.</p>
+    </li>
+    <li class="solucao">
+      <span class="solucao__num">03</span>
+      <h3 class="solucao__nome">Ar-condicionado</h3>
+      <p class="solucao__texto">Instalação e manutenção de ar-condicionado com qualidade e rapidez. Com os painéis, o conforto sai da energia do sol.</p>
+    </li>
+  </ol>
+</section>
+
+      <!-- Obras e bastidores: fotos tiradas do Instagram da Produsol (@produsol). Cada uma leva ao post original.
+     Para trocar uma foto, salve a nova em public/ (WebP, ~800 px) e mude o src, o texto e o link. -->
+<section class="secao obras" id="obras" aria-labelledby="obras-titulo">
+  <p class="secao__rotulo">[ do nosso instagram ]</p>
+  <h2 class="secao__titulo" id="obras-titulo">Obras e bastidores</h2>
+
+  <ul class="obras__grade">
+    <li class="obra">
+      <a class="obra__link" href="https://www.instagram.com/produsol/p/DA1WT1USz7k/" target="_blank" rel="noopener">
+        <img class="obra__img" src="./obra-apucarana.webp" width="636" height="356" alt="Técnico da Produsol sorrindo em cima de um telhado coberto de painéis solares" loading="lazy" decoding="async" />
+        <span class="obra__rotulo">Energia solar</span>
+        <span class="obra__texto">Sistema entregue em Apucarana-PR</span>
+      </a>
+    </li>
+    <li class="obra">
+      <a class="obra__link" href="https://www.instagram.com/produsol/p/C_siZiPRio2/" target="_blank" rel="noopener">
+        <img class="obra__img" src="./obra-paineis.webp" width="636" height="635" alt="Fileiras de painéis solares instalados sobre um telhado de cerâmica" loading="lazy" decoding="async" />
+        <span class="obra__rotulo">Energia solar</span>
+        <span class="obra__texto">Painéis no telhado de cerâmica</span>
+      </a>
+    </li>
+    <li class="obra">
+      <a class="obra__link" href="https://www.instagram.com/produsol/reel/DChKov-pcJY/" target="_blank" rel="noopener">
+        <img class="obra__img" src="./obra-carregador.webp" width="357" height="636" alt="Técnico da Produsol segurando o conector de um carregador de carro elétrico de parede" loading="lazy" decoding="async" />
+        <span class="obra__rotulo">Carro elétrico</span>
+        <span class="obra__texto">Carregamento veicular completo</span>
+      </a>
+    </li>
+    <li class="obra">
+      <a class="obra__link" href="https://www.instagram.com/produsol/p/C_vEH7SR1ZS/" target="_blank" rel="noopener">
+        <img class="obra__img" src="./obra-ar.webp" width="636" height="636" alt="Ar-condicionado split instalado na parede" loading="lazy" decoding="async" />
+        <span class="obra__rotulo">Ar-condicionado</span>
+        <span class="obra__texto">Ar-condicionado movido a energia limpa</span>
+      </a>
+    </li>
+    <li class="obra">
+      <a class="obra__link" href="https://www.instagram.com/produsol/reel/DC1S7dMx4Q_/" target="_blank" rel="noopener">
+        <img class="obra__img" src="./obra-equipe.webp" width="357" height="636" alt="Responsável pela Produsol em frente a um painel solar" loading="lazy" decoding="async" />
+        <span class="obra__rotulo">A Produsol</span>
+        <span class="obra__texto">Uma história, centenas de clientes</span>
+      </a>
+    </li>
+    <li class="obra">
+      <a class="obra__link" href="https://www.instagram.com/produsol/reel/C_iO3eox-Fu/" target="_blank" rel="noopener">
+        <img class="obra__img" src="./obra-feira.webp" width="356" height="541" alt="Responsável pela Produsol ao lado de uma picape elétrica sob uma cobertura de painéis solares" loading="lazy" decoding="async" />
+        <span class="obra__rotulo">Mobilidade elétrica</span>
+        <span class="obra__texto">Energia solar e carro elétrico juntos</span>
+      </a>
+    </li>
+  </ul>
+
+  <a class="botao botao--tinta obras__botao" href="https://www.instagram.com/produsol/" target="_blank" rel="noopener">Ver mais no Instagram<span class="botao__seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" /></svg></span></a>
+</section>
+
+      <!-- Como funciona: do primeiro contato ao sistema ligado. Qualquer quantidade de passos. -->
+<section class="secao passos" id="como-funciona" aria-labelledby="passos-titulo">
+  <p class="secao__rotulo">[ como funciona ]</p>
+  <h2 class="secao__titulo" id="passos-titulo">Da conta de luz<br />ao sistema ligado</h2>
+
+  <ol class="passos__lista">
+    <li class="passo">
+      <span class="passo__num">1</span>
+      <h3 class="passo__nome">Você manda a conta</h3>
+      <p class="passo__texto">Uma foto da conta de luz no WhatsApp já basta para começar.</p>
+    </li>
+    <li class="passo">
+      <span class="passo__num">2</span>
+      <h3 class="passo__nome">Simulação e projeto</h3>
+      <p class="passo__texto">Calculamos quantos painéis o seu consumo pede e quanto a conta cai.</p>
+    </li>
+    <li class="passo">
+      <span class="passo__num">3</span>
+      <h3 class="passo__nome">Instalação</h3>
+      <p class="passo__texto">A equipe monta os painéis e o inversor no seu telhado.</p>
+    </li>
+    <li class="passo">
+      <span class="passo__num">4</span>
+      <h3 class="passo__nome">Homologação</h3>
+      <p class="passo__texto">Cuidamos da papelada com a Copel até o sistema ser ligado.</p>
+    </li>
+  </ol>
+</section>
+
+      <!-- Dúvidas: cada pergunta é um <details> (abre e fecha sem JS). -->
+<section class="secao duvidas" id="duvidas" aria-labelledby="duvidas-titulo">
+  <p class="secao__rotulo">[ dúvidas ]</p>
+  <h2 class="secao__titulo" id="duvidas-titulo">Perguntas de quem<br />está fazendo orçamento</h2>
+
+  <div class="duvidas__lista">
+    <details class="duvida">
+      <summary>Funciona em dia nublado?</summary>
+      <p>Funciona, gerando menos. O sistema é dimensionado pela média do ano, não por um dia de sol.</p>
+    </details>
+    <details class="duvida">
+      <summary>E à noite?</summary>
+      <p>À noite a casa usa a energia da rede. O que os painéis geram a mais durante o dia vira crédito na conta da Copel e abate o consumo da noite.</p>
+    </details>
+    <details class="duvida">
+      <summary>Quanto tempo leva?</summary>
+      <p>Projeto, instalação e homologação em 45 dias.</p>
+    </details>
+    <details class="duvida">
+      <summary>Precisa de manutenção?</summary>
+      <p>Pouca: limpeza dos painéis de tempos em tempos e uma conferência do sistema.</p>
+    </details>
+    <details class="duvida">
+      <summary>Dá para incluir ar-condicionado e carro elétrico?</summary>
+      <p>Dá. Se você pretende instalar um ar-condicionado ou um carregador, avise na simulação: o sistema já sai projetado para esse consumo.</p>
+    </details>
+  </div>
+</section>
+
+      <!-- Onde estamos: o mapa do Google (iframe) e o Street View da fachada em 360° (motion/street.js, com o Pannellum).
+     A foto 360 é a <img> abaixo: sem JS ela aparece parada; com JS vira o visualizador. data-yaw é para onde a vista
+     começa olhando (em graus; a fachada da Produsol fica à esquerda da foto). -->
+<section class="secao endereco" id="endereco" aria-labelledby="endereco-titulo">
+  <p class="secao__rotulo">[ onde estamos ]</p>
+  <h2 class="secao__titulo" id="endereco-titulo">Rua Ponta Grossa, 270<br />Centro, Apucarana-PR</h2>
+
+  <div class="endereco__vistas">
+    <figure class="vista">
+      <div class="vista__quadro">
+        <iframe class="vista__mapa" title="Mapa da Produsol na Rua Ponta Grossa, 270, Centro, Apucarana-PR" src="https://maps.google.com/maps?q=-23.558528,-51.469175&amp;z=17&amp;hl=pt-BR&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="vista__reserva" href="https://www.google.com/maps/place/R.+Ponta+Grossa,+270+-+Centro,+Apucarana+-+PR,+86800-030/@-23.558528,-51.469175,17z" target="_blank" rel="noopener">Abrir o mapa no Google Maps</a>
+      </div>
+      <figcaption class="vista__legenda">[ mapa ]</figcaption>
+    </figure>
+    <figure class="vista">
+      <div class="vista__quadro street" data-yaw="-128" data-pitch="2" data-hfov="95">
+        <img class="street__img" src="./street-view.jpg" width="2576" height="1288" alt="Vista 360° da rua em frente à Produsol, com a fachada da loja à esquerda" loading="lazy" decoding="async" />
+      </div>
+      <figcaption class="vista__legenda">[ street view 360° · arraste para olhar em volta ]</figcaption>
+    </figure>
+  </div>
+
+  <div class="endereco__acoes">
+    <a class="botao botao--tinta" href="https://www.google.com/maps/dir/?api=1&amp;destination=-23.558528,-51.469175" target="_blank" rel="noopener">Como chegar<span class="botao__seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" /></svg></span></a>
+    <a class="endereco__link" href="https://www.google.com/maps/place/R.+Ponta+Grossa,+270+-+Centro,+Apucarana+-+PR,+86800-030/@-23.558528,-51.469175,17z" target="_blank" rel="noopener">Abrir no Google Maps</a>
+  </div>
+</section>
+
+    </main>
+    <!-- Rodapé: o logo da Produsol e os contatos. -->
+<footer class="rodape">
+  <a class="rodape__logo" href="#topo" aria-label="Produsol, voltar ao topo"><svg class="logo" viewBox="0 0 3916 856" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="currentColor"><path d="M0 0 C1.2 0.3 2.4 0.6 3.7 1 C7.2 1.9 10.6 2.9 14 4 C15.5 4.5 17 4.9 18.6 5.4 C69.3 21.3 117.3 53.1 149 96 C149.9 97.2 150.8 98.3 151.7 99.5 C181.4 138.6 197 186.4 196.6 235.2 C196.6 236.3 196.6 237.4 196.6 238.5 C196.5 255.4 195.1 271.5 191 288 C190.7 289.4 190.4 290.8 190.1 292.2 C174.6 356.8 127.9 412.7 72.1 447 C2.3 488.2 -80.9 501.9 -159.8 482.5 C-205.2 470.8 -244.7 449.6 -280 419 C-280.5 418.6 -280.5 418.6 -282.8 416.6 C-288 412 -292.5 407.3 -297 402 C-298.4 400.5 -299.8 399 -301.2 397.5 C-327.1 368.6 -344.2 332.6 -353 295 C-353.3 293.9 -353.6 292.8 -353.8 291.7 C-367.3 235.3 -352.9 174 -324 125 C-313.4 107.9 -301 92.4 -287 78 C-286.4 77.4 -286.4 77.4 -283.6 74.5 C-277.1 67.8 -270.4 61.7 -263 56 C-262 55.2 -261 54.4 -260 53.6 C-228.4 28.8 -191.9 10.7 -153 1 C-152.3 0.8 -152.3 0.8 -148.6 -0.1 C-99.9 -11.8 -48.6 -13.1 0 0 Z M-120 96 C-120.6 96.2 -120.6 96.2 -123.8 97.3 C-141.5 103.9 -156.3 115.2 -170 128 C-170.8 128.8 -171.7 129.5 -172.5 130.3 C-201.2 158 -216.9 198.4 -218.2 237.9 C-218.8 277.6 -207.7 314.3 -182 345 C-181.3 346 -180.6 346.9 -179.8 347.9 C-179.5 348.2 -179.5 348.2 -178 350 C-177.3 350 -176.7 350 -176 350 C-175.8 350.5 -175.8 350.5 -175 353 C-150.4 376.7 -119.1 389.7 -85 390.5 C-45.3 389.6 -11.9 371.9 15.5 343.9 C46.2 310.2 58.1 267.3 56.9 222.6 C54.2 183 36.6 146.7 7.6 119.8 C-28.7 89.9 -75.4 80.4 -120 96 Z " transform="translate(1268,362)"/><path d="M0 0 C3.5 3.5 2.9 8.7 3.4 13.4 C3.4 14.1 3.4 14.1 3.7 17.2 C5 30.4 6.1 43.7 7.1 57 C7.2 58.1 7.3 59.2 7.4 60.3 C10.7 101.6 10.7 101.6 9 105 C2.3 104.7 -3.4 103 -9.7 100.7 C-26.3 94.7 -42.7 91.1 -60 88 C-61.4 87.7 -62.8 87.5 -64.2 87.2 C-87.1 83.6 -114.1 84.3 -133.8 97.8 C-141.3 103.5 -145.9 109.7 -148 119 C-149.8 135.8 -142.4 149.8 -132.4 162.9 C-124.5 172.4 -115.5 181.1 -105.8 188.8 C-102.6 191.3 -99.6 193.9 -96.5 196.5 C-89.8 202.2 -83 207.7 -76.2 213.2 C-70.9 217.6 -65.7 222 -60.7 226.6 C-58.2 228.9 -55.6 230.9 -53 233 C-19.1 260.6 8.2 295.4 13.7 339.8 C16.6 369.4 4.8 397.9 -13 421 C-47.9 462.1 -95.2 475.8 -147.3 480.5 C-190.3 483 -233 480.5 -275 470.7 C-277.7 470.1 -280.4 469.5 -283.2 468.9 C-284.6 468.5 -286 468.2 -287.5 467.9 C-288.1 467.7 -288.1 467.7 -291.1 467.1 C-294 466 -294 466 -298 462 C-298.8 458.2 -298.8 458.2 -299.2 453.5 C-299.3 452.6 -299.3 452.6 -299.7 448.2 C-299.8 446.4 -300 444.5 -300.1 442.6 C-300.3 440.7 -300.5 438.8 -300.6 436.9 C-301.8 423.5 -302.7 410.1 -303.6 396.6 C-304.1 388.6 -304.8 380.6 -305.6 372.6 C-306.6 360.2 -306.6 360.2 -305 357 C-299.1 357.6 -294.2 359.8 -288.8 362.1 C-269.3 369.8 -249.4 375.5 -229 380 C-227.6 380.3 -226.3 380.6 -224.9 380.9 C-198 386.7 -167.3 387 -143 373 C-133.7 365.9 -126.7 358 -125 346 C-124.1 334 -128 324.6 -135 315 C-138.5 311.1 -142.2 307.4 -145.9 303.8 C-146.9 302.8 -147.8 301.9 -148.8 300.9 C-154.1 295.7 -159.4 290.8 -165 286 C-167 284 -169 282 -171 280 C-174.2 276.7 -177.4 273.6 -180.9 270.6 C-186 266.1 -190.7 261.3 -195.4 256.5 C-197.9 254.1 -200.4 251.8 -202.9 249.6 C-208.6 244.6 -213.7 239.3 -219 233.9 C-222.9 230.1 -226.9 226.6 -231 223 C-232.9 221.2 -234.7 219.4 -236.5 217.5 C-240.8 213.1 -245.4 209 -250 205 C-273.3 183.4 -288.2 154.3 -290.4 122.5 C-291 92.4 -281.1 63.7 -261 41 C-260.2 40.1 -259.4 39.1 -258.6 38.2 C-232.1 7.8 -193.9 -4.4 -155.2 -10.4 C-154.2 -10.5 -153.2 -10.7 -152.1 -10.8 C-102.7 -18 -48.1 -13.6 0 0 Z " transform="translate(2890,368)"/><path d="M0 0 C4.3 -0.3 8.4 -0.4 12.7 -0.4 C13.3 -0.4 13.3 -0.4 16.7 -0.4 C21.1 -0.4 25.5 -0.4 29.9 -0.4 C32.9 -0.4 36 -0.4 39 -0.4 C45.4 -0.4 51.8 -0.4 58.1 -0.4 C66.3 -0.4 74.5 -0.4 82.7 -0.4 C89 -0.4 95.3 -0.4 101.6 -0.4 C104.6 -0.4 107.6 -0.4 110.7 -0.4 C114.9 -0.4 119.1 -0.4 123.3 -0.4 C124.6 -0.4 125.8 -0.4 127.1 -0.4 C130.1 -0.4 133.1 -0.2 136 0 C142.7 10.1 137.4 33.5 136.8 45.5 C135.7 69.3 134.7 93.1 133.9 116.9 C133.3 135.4 132.6 153.8 131.7 172.3 C131 187.5 130.5 202.8 130 218 C129.4 235 128.8 252 128 268.9 C127 288.9 126.4 308.9 125.7 328.9 C125.7 329.5 125.7 329.5 125.6 332.5 C125.5 334.8 125.4 337.1 125.4 339.5 C125.2 345.6 124.9 351.6 124.6 357.7 C124.6 358.3 124.6 358.3 124.5 361.5 C124.4 363.9 124.3 366.3 124.1 368.7 C124 371.4 124 374.2 124 377 C127 380 129.6 379.3 133.8 379.3 C135.5 379.3 137.2 379.3 139 379.3 C140.8 379.3 142.7 379.3 144.6 379.3 C147.6 379.3 150.6 379.3 153.6 379.3 C156.8 379.3 160.1 379.3 163.3 379.3 C170 379.3 176.8 379.3 183.5 379.3 C202.6 379.4 221.8 379.4 240.9 379.4 C251.5 379.4 262.1 379.4 272.6 379.4 C279.3 379.5 286 379.5 292.7 379.4 C297.9 379.4 303 379.5 308.1 379.5 C309.1 379.5 309.1 379.5 313.8 379.5 C314.6 379.5 314.6 379.5 318.9 379.5 C320.4 379.5 321.9 379.5 323.4 379.5 C327 380 327 380 331 384 C331.4 388 331.4 388 331.2 392.9 C331.2 393.8 331.2 393.8 331.1 398.4 C331 400.4 331 402.4 330.9 404.4 C330.8 406.5 330.7 408.5 330.7 410.6 C330.5 416 330.3 421.3 330.1 426.7 C330 430 329.9 433.2 329.8 436.5 C329.6 441.7 329.4 446.9 329.2 452.1 C329.1 455.1 329 458 328.8 461 C328.8 461.9 328.8 461.9 328.6 466.4 C328.5 468 328.5 469.5 328.4 471.1 C328 475 328 475 326 479 C321.6 481.2 315.4 480.1 310.4 480.1 C309 480.1 307.6 480.1 306.1 480.1 C301.3 480.1 296.4 480.1 291.6 480.1 C288.1 480.1 284.7 480.2 281.2 480.2 C271.8 480.2 262.4 480.2 253 480.2 C245.1 480.2 237.3 480.2 229.5 480.2 C212 480.2 194.6 480.2 177.2 480.2 C176.1 480.2 175.1 480.2 174 480.2 C172.9 480.2 171.9 480.2 170.8 480.2 C153.8 480.2 136.8 480.2 119.8 480.2 C102.4 480.2 85 480.2 67.5 480.2 C57.7 480.2 47.9 480.2 38.2 480.2 C28.9 480.3 19.7 480.3 10.5 480.2 C7.1 480.2 3.8 480.2 0.4 480.3 C-4.2 480.3 -8.8 480.3 -13.4 480.2 C-14.1 480.2 -14.1 480.2 -17.6 480.3 C-26.8 480.2 -26.8 480.2 -29 478 C-29.6 468.3 -28.2 458.6 -27.1 449 C-27 447.3 -26.8 445.7 -26.6 444 C-25.7 435.9 -24.9 427.7 -23.9 419.6 C-23.1 412 -22.4 404.3 -21.7 396.6 C-21.6 395.2 -21.4 393.8 -21.3 392.4 C-20.9 387.3 -20.4 382.1 -20 377 C-19.8 374.8 -19.6 372.7 -19.4 370.5 C-13 295.8 -8.1 221 -5.3 146 C-5.3 144.4 -5.2 142.8 -5.1 141.1 C-4 110.7 -3.1 80.4 -2.8 50 C-2.7 48.6 -2.7 47.2 -2.7 45.7 C-2.6 40.1 -2.6 34.4 -2.5 28.8 C-2.5 24.6 -2.4 20.3 -2.4 16.1 C-2.4 14.8 -2.4 13.5 -2.4 12.2 C-2.2 3.3 -2.2 3.3 0 0 Z " transform="translate(3582,361)"/><path d="M0 0 C28.2 29 42.8 66.1 50.8 105.1 C51 106.4 51.3 107.6 51.6 108.9 C67 181.1 53.3 264 14.6 326.6 C12.7 329.5 10.8 332.3 8.8 335.1 C8.1 336.1 7.4 337.1 6.6 338.1 C1.2 345.6 -4.8 352.4 -11.2 359.1 C-12.3 360.3 -13.4 361.4 -14.5 362.6 C-39 387.9 -69.7 402.9 -103.2 412.1 C-104.9 412.6 -106.5 413.1 -108.2 413.6 C-136.8 421.3 -167.3 423.3 -196.7 423.3 C-198.4 423.3 -200.2 423.3 -202.1 423.3 C-206.9 423.3 -211.8 423.3 -216.6 423.3 C-221.7 423.3 -226.9 423.3 -232 423.3 C-240.7 423.3 -249.3 423.3 -257.9 423.3 C-267.8 423.2 -277.7 423.3 -287.6 423.3 C-296.1 423.3 -304.7 423.3 -313.2 423.3 C-318.3 423.3 -323.4 423.3 -328.5 423.3 C-348.9 423.3 -369.4 423.2 -389.9 422.8 C-391.6 422.8 -393.3 422.8 -395 422.7 C-396.6 422.7 -398.2 422.7 -399.8 422.6 C-401.2 422.6 -402.5 422.6 -403.9 422.6 C-407.2 422.1 -407.2 422.1 -410.2 419.1 C-411.7 404 -409.8 388 -409.1 372.8 C-407.9 349.3 -406.9 325.7 -406.2 302.2 C-405.6 284 -404.9 265.8 -404 247.6 C-403.3 232.3 -402.7 216.9 -402.2 201.6 C-401.6 182.9 -400.9 164.2 -400 145.5 C-399.3 130.4 -398.8 115.3 -398.2 100.2 C-397.6 81.4 -396.9 62.7 -396 44 C-395.1 25.6 -394.5 7.3 -393.9 -11 C-393.8 -16.6 -393.6 -22.3 -393.4 -27.9 C-393.3 -30.7 -393.2 -33.4 -393.1 -36.2 C-393 -37 -393 -37 -392.9 -40.8 C-392.8 -42.1 -392.8 -43.4 -392.7 -44.7 C-392.2 -47.9 -392.2 -47.9 -389.2 -51.9 C-384.7 -53.4 -380.1 -53.1 -375.3 -53.2 C-374.7 -53.2 -374.7 -53.2 -371.9 -53.2 C-368.1 -53.3 -364.3 -53.4 -360.5 -53.4 C-357.8 -53.5 -355.1 -53.5 -352.4 -53.5 C-343.7 -53.7 -335 -53.8 -326.3 -53.9 C-323.3 -54 -320.3 -54 -317.4 -54.1 C-59.4 -57.9 -59.4 -57.9 0 0 Z M-264.2 38.1 C-266 43.4 -265.7 49.2 -265.9 54.8 C-266 56.2 -266.1 57.5 -266.1 59 C-266.2 61.9 -266.4 64.9 -266.5 67.9 C-266.8 75.6 -267.2 83.3 -267.5 91.1 C-267.6 92.6 -267.6 94.1 -267.7 95.6 C-268.2 106.3 -268.7 117 -269.3 127.6 C-270.2 143.1 -270.8 158.5 -271.4 174 C-271.9 189 -272.6 204 -273.5 219 C-274.4 234.5 -275 250.1 -275.6 265.6 C-276 276.2 -276.4 286.8 -277 297.4 C-277.3 301.7 -277.5 306.1 -277.6 310.5 C-277.6 311.9 -277.6 313.2 -277.7 314.6 C-277.2 318.1 -277.2 318.1 -273.2 322.1 C-269.2 322.7 -265.4 323 -261.2 323.1 C-259.5 323.2 -257.8 323.3 -256 323.4 C-250.9 323.6 -245.8 323.8 -240.6 324.1 C-237.4 324.2 -234.2 324.3 -231 324.5 C-189.4 326.2 -154.6 323.4 -122.1 294.9 C-96.8 270.9 -86.5 240.3 -84.6 206.4 C-84.4 204.5 -84.3 202.7 -84.2 200.7 C-81.4 155.6 -79.7 113.4 -111.2 77.1 C-134 52.1 -162.4 39.6 -196 38 C-197.5 37.9 -199.1 37.8 -200.7 37.7 C-205.6 37.4 -210.6 37.2 -215.5 36.9 C-218.8 36.8 -222.2 36.6 -225.5 36.4 C-243.1 35.5 -243.1 35.5 -251.2 35.1 C-252.1 35.1 -252.1 35.1 -256.5 34.9 C-260.2 35.1 -260.2 35.1 -264.2 38.1 Z " transform="translate(1938.25,416.875)"/><path d="M0 0 C7.1 0 14.2 -0 21.3 -0 C83.4 -0 83.4 -0 107.8 0.5 C108.5 0.5 108.5 0.5 112.2 0.6 C150.3 1.7 189.4 11 218.9 36.1 C219.6 36.6 219.6 36.6 222.8 39.3 C243.9 59.3 256.1 87.5 257 116.5 C257.6 152.7 252.5 188.3 226.9 216.1 C225.9 217.2 224.9 218.3 223.8 219.5 C205.9 238.2 184.8 249 160.9 258.1 C159.5 258.7 158.2 259.2 156.7 259.7 C153.8 260.9 150.9 262 147.9 263.1 C148.4 270.3 151.3 276.3 154.2 282.8 C155.3 285.3 156.4 287.9 157.5 290.4 C158.1 291.7 158.6 293 159.2 294.3 C161.8 300.2 164.4 306.2 166.9 312.1 C167.9 314.5 168.9 316.8 169.9 319.1 C199.9 389.1 199.9 389.1 201.4 392.6 C202.4 395 203.4 397.3 204.4 399.6 C206.9 405.4 209.4 411.2 211.9 417.1 C217.8 430.9 223.7 444.7 229.7 458.4 C230.2 459.6 230.8 460.8 231.3 462.1 C231.7 463.1 232.2 464.2 232.7 465.2 C235.9 472.9 235.9 472.9 234.9 478.1 C232.9 480.1 232.9 480.1 227.9 480.3 C219.4 480.2 210.8 479.7 202.3 479.3 C181.5 478.2 160.8 477.5 140 476.8 C134.3 476.6 128.7 476.4 123 476.2 C120.1 476.1 117.1 476 114.2 476 C112.5 475.9 110.9 475.8 109.1 475.8 C107.7 475.7 106.3 475.7 104.8 475.6 C100.5 475.1 97.6 474.3 93.9 472.1 C92.1 469 92.1 469 90.9 465.2 C90.4 463.8 89.9 462.3 89.4 460.8 C88.9 459.3 88.4 457.7 87.9 456.1 C87.4 454.6 86.9 453 86.3 451.4 C84.6 446.2 82.9 441 81.3 435.9 C80 432 78.8 428.2 77.6 424.4 C77.3 423.4 76.9 422.5 76.6 421.5 C73.7 412.6 70.8 403.7 67.8 394.8 C63.8 382.8 59.9 370.9 56 358.9 C51.3 344.2 46.3 329.5 41.3 314.9 C36.3 300.5 31.6 286 26.9 271.5 C23 259.5 19 247.5 14.7 235.7 C13.1 230.9 11.9 227.2 11.9 222.1 C13.9 220.1 13.9 220.1 16.9 220 C17.5 220 17.5 220 20.7 220.1 C22.1 220.1 23.5 220.2 25 220.2 C26.5 220.2 28 220.3 29.6 220.3 C59.8 220.7 85.9 213.2 108.6 192.8 C121.3 178.7 127.7 158.7 126.8 139.8 C125.5 127.4 120.5 116.6 110.9 108.6 C95 97.2 79.3 94 59.9 94 C58.8 94 57.7 94 56.5 93.9 C52.8 93.9 49.1 93.9 45.4 93.9 C44.2 93.9 42.9 93.9 41.6 93.9 C26.4 94 11.2 94.1 -4 94.9 C-5.3 95 -6.6 95.1 -8 95.2 C-11.1 95.4 -14.1 95.7 -17.1 96.1 C-19.6 99.9 -19.5 102.1 -19.7 106.6 C-19.7 107.4 -19.7 107.4 -19.9 111.4 C-20 113.1 -20 114.8 -20.1 116.6 C-20.1 117.5 -20.1 117.5 -20.3 122 C-20.6 126.9 -20.8 131.7 -21 136.6 C-21.1 140.6 -21.3 144.7 -21.5 148.7 C-22.6 174.7 -23.6 200.6 -24.4 226.6 C-24.9 242 -25.6 257.3 -26.3 272.7 C-27.1 288 -27.6 303.3 -28.1 318.6 C-28.7 337.3 -29.4 356 -30.3 374.7 C-31.2 392.8 -31.8 410.9 -32.4 428.9 C-33.9 476 -33.9 476 -38.1 480.1 C-42.3 480.2 -46.4 480.1 -50.6 479.9 C-53.3 479.8 -56.1 479.7 -58.8 479.5 C-60.3 479.5 -61.8 479.4 -63.3 479.3 C-70.1 479 -76.8 478.8 -83.5 478.6 C-90.8 478.4 -98 478.1 -105.3 477.9 C-109.1 477.8 -112.8 477.6 -116.6 477.5 C-122.1 477.3 -127.6 477.1 -133.1 476.9 C-134.8 476.9 -136.5 476.8 -138.2 476.8 C-153.3 476.2 -153.3 476.2 -160.1 474.1 C-163.1 468.2 -161 458.8 -160.8 452.2 C-160.8 451.1 -160.8 450.1 -160.8 449 C-160.3 426.9 -159.3 404.8 -158.3 382.7 C-157.4 364 -156.6 345.3 -156 326.6 C-155.4 308.6 -154.7 290.6 -153.8 272.6 C-153.1 257.3 -152.6 242 -152.1 226.6 C-151.5 207.9 -150.8 189.2 -149.8 170.5 C-149.1 154.1 -148.5 137.7 -148 121.4 C-147.4 103.6 -146.7 85.8 -145.8 68.1 C-145.1 55 -144.7 41.9 -144.4 28.9 C-144.3 25 -144.2 21 -144.1 17.1 C-144.1 15.9 -144 14.6 -144 13.3 C-143.9 9.8 -143.9 9.8 -143.1 4.1 C-137.4 0.7 -133.3 0.7 -126.9 0.6 C-125.8 0.6 -124.6 0.6 -123.4 0.6 C-119.6 0.5 -115.7 0.5 -111.9 0.4 C-109.1 0.4 -106.3 0.4 -103.6 0.3 C-69.1 -0 -34.5 -0 0 0 Z " transform="translate(604.0955810546875,362.873046875)"/><path d="M0 0 C1.3 -0 2.5 -0 3.8 -0 C8 -0 12.2 -0 16.4 -0 C19.3 -0 22.2 -0 25.1 -0 C31.2 -0 37.3 -0 43.3 -0 C51.1 0 59 0 66.8 -0 C72.8 -0 78.8 -0 84.7 -0 C87.6 -0 90.5 -0 93.4 -0 C97.4 -0 101.4 -0 105.4 0 C106.6 -0 107.8 -0 109.1 -0 C117.3 0 117.3 0 120.7 3.4 C120.8 7.3 120.7 11 120.5 14.8 C120.4 15.4 120.4 15.4 120.3 18.4 C119.8 27.6 119.2 36.8 118.5 46.1 C117.7 56.2 117.2 66.3 116.7 76.5 C116.1 88.3 115.3 100.2 114.4 112.1 C113.5 123.5 113 134.9 112.4 146.3 C111.9 155.7 111.4 165 110.7 174.4 C109.7 187 109 199.7 108.4 212.4 C108.1 219.3 107.7 226.2 107.1 233.1 C105.7 248.3 105.4 263.4 105.3 278.6 C105.3 281.1 105.3 283.5 105.2 285.9 C105 313.6 108.5 339.2 126 361.6 C143.1 379.1 167.7 384.4 191.3 384.8 C200.2 384.6 208.2 383.9 216.7 381.4 C218.2 381 219.7 380.5 221.3 380.1 C240.9 372.5 254.2 360.2 263.7 341.4 C265.5 337.1 267.1 332.8 268.7 328.4 C269.2 327 269.7 325.6 270.2 324.1 C277.7 299.3 279 274.2 280.1 248.5 C280.7 236.6 281.4 224.8 282.2 213 C283.2 195.8 284.2 178.7 285 161.6 C285.5 150.6 286.1 139.6 286.9 128.6 C287.6 119.1 288.1 109.7 288.5 100.3 C289.4 84.2 290.3 68.1 291.4 52 C291.6 49.4 291.7 46.7 291.9 44.1 C293.4 20.7 293.4 20.7 294.5 9.8 C294.7 8.6 294.8 7.4 294.9 6.2 C295.7 3.4 295.7 3.4 299.7 0.4 C303.9 0.1 308.1 -0 312.4 0 C313.7 -0 315 -0 316.3 -0 C320.6 -0 324.9 -0 329.3 -0 C332.2 -0 335.2 -0 338.2 -0 C344.5 -0 350.8 -0 357 -0 C365.1 0 373.2 0 381.2 -0 C387.4 -0 393.6 -0 399.7 -0 C402.7 -0 405.7 -0 408.6 -0 C412.8 -0 416.9 -0 421.1 0 C422.3 -0 423.6 -0 424.8 -0 C433.3 0 433.3 0 436.7 3.4 C437.3 13.8 436 24.3 435.3 34.6 C434.2 49.4 433.3 64.1 432.6 78.8 C432.1 89.8 431.5 100.8 430.7 111.8 C429.7 125.2 429 138.7 428.4 152.1 C427.9 162.3 427.4 172.5 426.7 182.8 C425.7 196.9 425 211.1 424.4 225.2 C423.8 237.8 423.2 250.5 422.4 263.1 C421.8 272.9 421.4 282.8 421 292.7 C418.7 345.1 413.3 391.6 373.3 430 C354.4 447 332.1 458.9 308.7 468.4 C307.6 468.8 306.6 469.2 305.6 469.7 C288.7 476.1 270.4 479.6 252.7 482.4 C251.9 482.5 251.9 482.5 247.8 483.2 C247 483.3 247 483.3 242.8 484 C241.3 484.3 239.8 484.5 238.3 484.7 C222.8 486.5 207.3 486.5 191.7 486.5 C189.9 486.5 188 486.5 186.1 486.5 C167.9 486.5 149.9 485.8 131.8 483.1 C130.3 482.9 128.7 482.7 127.1 482.5 C114.8 480.7 102.7 478.4 90.7 475.4 C88.8 474.9 86.9 474.5 85 474.1 C63.6 468.8 43.8 461.4 24.7 450.4 C23.6 449.8 22.6 449.2 21.5 448.6 C-4.6 432.9 -21.4 408.3 -29.4 379.2 C-37.5 345.2 -35.4 310.1 -33.5 275.6 C-33.3 272.3 -33.2 269 -33 265.6 C-31.8 244.2 -30.7 222.7 -29 201.3 C-28.2 190 -27.7 178.7 -27.1 167.4 C-26.6 158.1 -26 148.7 -25.3 139.4 C-24.4 126.8 -23.7 114.1 -23.1 101.5 C-22.5 90.8 -21.9 80.1 -21.1 69.4 C-20.3 57.8 -19.7 46.2 -19.1 34.6 C-18.7 26.9 -18.2 19.2 -17.5 11.5 C-17.4 10 -17.3 8.5 -17.1 7 C-15.2 -1.7 -7.2 -0 0 0 Z " transform="translate(2095.340087890625,362.61181640625)"/><path d="M0 0 C1.7 0 3.4 0.1 5.2 0.1 C46.4 1.1 83.2 10.9 112.6 41.3 C116.5 45.6 119.6 49.7 122.6 54.6 C123.3 55.6 123.9 56.7 124.6 57.7 C145.6 92.6 148 134.9 139.5 174 C138.3 178.6 137 183.1 135.6 187.6 C135.3 188.7 135 189.8 134.7 190.9 C128 212.3 116.9 231.2 101.6 247.6 C100.5 248.9 99.4 250.1 98.2 251.4 C63.6 283 13.5 297.6 -32.9 295.5 C-43.8 294.5 -54.5 292.5 -64.4 287.6 C-74.2 271.2 -74.3 246.2 -77.1 227.4 C-77.2 226.7 -77.2 226.7 -77.8 222.9 C-78 221.5 -78.2 220.1 -78.4 218.7 C-78.5 218.1 -78.5 218.1 -79 214.9 C-79.4 211.6 -79.4 211.6 -79.4 206.6 C-74.9 203.7 -70.5 204.8 -65.4 205.1 C-44.2 206.2 -23.6 204.2 -6.4 190.6 C6.5 178.1 11.6 163.7 12.1 146 C11.8 133.1 10.6 118.3 2.6 107.6 C-17.3 89.4 -47.6 91.7 -72.8 92.8 C-83.6 93.4 -94.1 94.3 -104.4 97.6 C-106 100.8 -105.7 104 -105.8 107.5 C-105.9 109.1 -106 110.8 -106 112.5 C-106.1 114.4 -106.2 116.2 -106.3 118.1 C-106.4 120 -106.4 121.9 -106.5 123.9 C-106.7 129.1 -107 134.2 -107.2 139.4 C-107.3 142.6 -107.4 145.8 -107.6 149 C-108.8 176.6 -109.8 204.1 -110.7 231.6 C-111.2 247 -111.9 262.4 -112.6 277.8 C-113.4 294.5 -114 311.3 -114.5 328 C-115.1 345.4 -115.8 362.8 -116.6 380.1 C-117.5 398.5 -118.1 416.9 -118.7 435.3 C-119 445.5 -119.3 455.8 -119.8 466.1 C-119.9 467.4 -119.9 468.8 -120 470.2 C-120.4 473.6 -120.4 473.6 -122.4 478.6 C-130.5 482.7 -146.2 479.2 -155.1 478.8 C-168.3 478.1 -181.5 477.5 -194.7 477.1 C-195.3 477.1 -195.3 477.1 -198.6 476.9 C-205 476.7 -211.4 476.5 -217.8 476.3 C-220.1 476.2 -222.5 476.2 -224.8 476.1 C-225.9 476.1 -227 476 -228.1 476 C-232.9 475.8 -237.6 475.6 -242.4 474.6 C-242.4 468.8 -242.5 462.9 -242.5 457 C-242.5 454.1 -242.5 451.1 -242.6 448.1 C-242.6 438.9 -242.4 430.1 -240.9 421 C-238.7 406.3 -239 391 -238.6 376.1 C-237.9 357.1 -237.3 338.1 -236.4 319.1 C-235.6 301.9 -234.9 284.7 -234.4 267.5 C-233.8 249 -233 230.6 -232.1 212.1 C-231.4 196.8 -230.9 181.5 -230.4 166.1 C-229.8 147.4 -229.1 128.7 -228.1 110 C-227.4 95.9 -227 81.8 -226.5 67.7 C-225.4 32.7 -225.4 32.7 -224.4 16.7 C-224.3 15.5 -224.2 14.2 -224.2 13 C-223.6 5 -223.6 5 -221.4 1.6 C-216.2 0.5 -211.1 0.5 -205.9 0.4 C-204.2 0.4 -202.5 0.4 -200.7 0.4 C-199.8 0.4 -199.8 0.4 -195.1 0.3 C-194.2 0.3 -194.2 0.3 -189.2 0.2 C-183.9 0.2 -178.6 0.1 -173.3 0.1 C-169.9 0.1 -166.6 0 -163.3 -0 C-53.6 -1 -53.6 -1 0 0 Z " transform="translate(242.375,363.375)"/></g><g class="logo__sol" fill="#f06a25"><path d="M0 0 C7.8 4.5 11.6 10.4 14 19 C26.7 89.4 -4.9 178.2 -44 236 C-46.2 239.2 -48.5 242 -51 245 C-51.3 245.4 -51.3 245.4 -53 247.5 C-58.8 254.3 -65.3 260.1 -74 263 C-79.3 263.4 -82.6 263.1 -87 260 C-100.3 244.5 -98 221.1 -97 202 C-94.9 174.1 -88.6 146.6 -80 120 C-79.7 119.1 -79.7 119.1 -78.3 114.5 C-71.2 92.2 -62.5 70.4 -51 50 C-50 48 -48.9 46.1 -47.9 44.1 C-20.8 -4.2 -20.8 -4.2 0 0 Z " transform="translate(3398,2)"/><path d="M0 0 C21.6 11.9 30.1 41.8 36.6 63.7 C52.7 119.6 65.9 200.5 39 255 C35.6 260.1 32.7 264.4 27 267 C21 267.8 17.8 267.4 12.4 264.6 C-24.4 234.1 -29.8 166.6 -34.1 122.2 C-36.1 99.5 -36 76.5 -33 54 C-32.8 52.3 -32.6 50.6 -32.4 48.9 C-30.3 33 -27.3 15.1 -15.4 3.4 C-9.7 -0.7 -6.8 -1.5 0 0 Z " transform="translate(3107,54)"/><path d="M0 0 C10.7 5.9 19.9 12.9 29 21 C29.6 21.6 29.6 21.6 32.9 24.4 C50.6 40.1 50.6 40.1 58 49 C59.4 50.5 60.8 52.1 62.2 53.6 C66.8 58.7 71 64 75.2 69.4 C77 71.7 78.8 74 80.7 76.3 C88.8 86.4 95.9 97.1 103 108 C104.1 109.7 105.2 111.3 106.3 113 C112.5 122.7 118.1 132.5 123 143 C123.8 144.7 124.7 146.4 125.5 148.2 C134.3 166.9 144.8 189.2 138.8 210.2 C136.5 213.8 133.9 216.1 130 218 C113.9 219.7 99.4 209.9 87.2 200.3 C85.5 198.9 83.7 197.4 82 196 C81 195.1 79.9 194.3 78.9 193.4 C66.3 182.9 54.7 171.4 44 159 C43 157.9 42 156.8 41 155.6 C11.2 121.1 -16.2 80.8 -30 37 C-30.6 35.3 -31.2 33.6 -31.8 31.9 C-34.2 22 -35.2 11.8 -32 2 C-23 -8.9 -11.4 -5.5 0 0 Z " transform="translate(2841,153)"/><path d="M0 0 C3.7 3.7 4.6 6.7 4.8 11.9 C0.9 31.2 -13.2 45.9 -26.4 59.6 C-27.6 60.9 -28.7 62.1 -29.9 63.4 C-33.6 66.9 -37.5 70.1 -41.4 73.2 C-43.7 75.1 -45.9 77 -48.1 78.9 C-52.6 82.9 -57.3 86.5 -62.1 90.1 C-63 90.7 -63.9 91.4 -64.8 92.1 C-71.2 96.8 -77.6 101.4 -84.4 105.6 C-85.9 106.6 -87.4 107.6 -89 108.6 C-123.7 130.5 -166 155.8 -208.1 155.9 C-209.9 156 -211.7 156 -213.5 156 C-219.7 155.5 -223.6 154.2 -228.2 150.1 C-232.1 145.6 -231.8 141.4 -231.4 135.6 C-225.9 117.6 -212.6 103.5 -199.5 90.5 C-198.6 89.6 -197.7 88.7 -196.7 87.7 C-190.6 81.6 -184.2 76 -177.4 70.6 C-176.2 69.7 -175 68.7 -173.7 67.7 C-149.8 48.8 -124 31.7 -96.4 18.6 C-95.5 18.2 -94.7 17.8 -93.8 17.4 C-23.5 -16.6 -23.5 -16.6 0 0 Z " transform="translate(3663.375,209.375)"/><path d="M0 0 C1.6 0.4 3.2 0.9 4.8 1.3 C24.4 6.9 43 14.6 61 24 C61.6 24.3 61.6 24.3 64.4 25.6 C81.2 33.5 96.4 44.6 111 56 C111.9 56.7 112.9 57.5 113.9 58.2 C144.9 82.9 169 114.2 186 150 C186.3 150.6 186.3 150.6 187.8 153.7 C212.1 206.1 212.6 267.3 193.5 321.3 C183.8 347.6 170 371.4 152 393 C151.1 394.1 150.2 395.2 149.3 396.3 C105.2 448.7 43.2 480.5 -23 495 C-24.3 495.3 -25.5 495.6 -26.8 495.8 C-34.7 497.5 -42.5 498.6 -50.5 499.5 C-54 500 -54 500 -59 502 C-62 502.3 -62 502.3 -65.4 502.3 C-66.7 502.3 -68 502.3 -69.3 502.3 C-70.7 502.3 -72.1 502.3 -73.5 502.3 C-74.9 502.3 -76.4 502.3 -77.8 502.3 C-80.9 502.3 -83.9 502.3 -86.9 502.3 C-91.5 502.3 -96.1 502.3 -100.7 502.4 C-103.7 502.4 -106.6 502.4 -109.6 502.4 C-110.9 502.4 -112.3 502.4 -113.7 502.4 C-122 502.4 -129 501.3 -137 499 C-140 498.5 -143 498 -146.1 497.6 C-160.6 495.3 -174.9 492.3 -189 488 C-190.2 487.6 -191.5 487.3 -192.8 486.9 C-261.6 466.1 -326 420.7 -361 357 C-390.5 301.3 -399 239.9 -380.8 179 C-371.9 151.2 -358.3 124.8 -340 102 C-339.3 101.1 -338.6 100.3 -337.9 99.4 C-323.5 81.2 -306.7 64.9 -288 51 C-286.7 50.1 -285.5 49.1 -284.2 48.1 C-203.5 -10.6 -95.5 -26.6 0 0 Z " transform="translate(3307,354)"/></g></svg></a>
+  <span>Energia solar · Apucarana, PR</span>
+  <a class="rodape__link" href="https://www.google.com/maps/place/R.+Ponta+Grossa,+270+-+Centro,+Apucarana+-+PR,+86800-030/@-23.558528,-51.469175,17z" target="_blank" rel="noopener">Rua Ponta Grossa, 270 · Centro</a>
+  <a class="rodape__link" href="https://wa.me/5543988302020?text=Ol%C3%A1%2C%20Produsol!%20Quero%20simular%20a%20energia%20solar%20com%20a%20minha%20conta%20de%20luz." target="_blank" rel="noopener">WhatsApp (43) 98830-2020</a>
+  <a class="rodape__link" href="https://www.instagram.com/produsol/" target="_blank" rel="noopener">@produsol</a>
+</footer>
+
+    <!-- Botão flutuante do WhatsApp: fica no canto de baixo em todas as telas e aparece depois da entrada do hero. -->
+<a class="zap" href="https://wa.me/5543988302020?text=Ol%C3%A1%2C%20Produsol!%20Quero%20simular%20a%20energia%20solar%20com%20a%20minha%20conta%20de%20luz." target="_blank" rel="noopener" aria-label="Falar com a Produsol no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path class="zap__balao" d="M16 3.2C8.9 3.2 3.2 8.8 3.2 15.8c0 2.4.7 4.7 1.9 6.6L3.2 28.8l6.6-1.8c1.9 1 4 1.6 6.2 1.6 7.1 0 12.8-5.6 12.8-12.7S23.1 3.2 16 3.2Z" /><path class="zap__fone" d="M11.6 9.4c-.3-.6-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.8 4.5 7 6.1 3.5 1.4 4.2 1.1 4.9 1 .8-.1 2.4-1 2.8-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5l-2.8-1.4c-.4-.1-.7-.2-.9.2-.3.4-1.1 1.4-1.3 1.6-.2.3-.5.3-.9.1-.4-.2-1.8-.7-3.3-2.1-1.2-1.1-2.1-2.4-2.3-2.8-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7l-1.3-3Z" /></svg>
+  <span class="zap__texto">WhatsApp</span>
+</a>
+
+    <div class="grao" aria-hidden="true"></div>
+  </body>
+</html>
